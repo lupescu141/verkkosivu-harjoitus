@@ -1,21 +1,87 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <title>home</title>
     <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
   </head>
 
   <body>
-    <ul>
-      <li>
-        <a href="home.html"
-          ><img class="logo" src="./images/logo.png" alt="logo"
-        /></a>
-      </li>
-      <li><a class="links" href="news.asp">News</a></li>
-      <li><a class="links" href="contact.asp">Contact</a></li>
-      <li><a class="links" href="about.asp">About</a></li>
-    </ul>
+    <div class="home_container">
+      <ul class="nav">
+        <li class="navbar">
+          <a class="navlink" href="home.html"
+            ><img class="logo" src="./images/logo.png" alt="logo"
+          /></a>
+        </li>
+
+        <li class="navbar"><a class="navlink" href="home.html">Home</a></li>
+
+        <li class="navbar">
+          <a class="navlink" href="products.html">Products</a>
+        </li>
+
+        <li class="navbar">
+          <a class="navlink" href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <img class="sticky" src="./images/sticky.webp" alt="skater" />
+
+      <ul class="product_ul">
+        <li>
+          <h1>News</h1>
+          <p>Check out our new boards!</p>
+        </li>
+        <li class="home_products">
+          <a href="products.html"
+            ><img
+              class="product_img"
+              src="./images/board_dragon.png"
+              alt="Dragon_board"
+          /></a>
+          <p class="product_name">epic dragon</p>
+          <p class="product_price">99$</p>
+        </li>
+        <li class="home_products">
+          <a href="products.html"
+            ><img
+              class="product_img"
+              src="./images/board_skull2.png"
+              alt="board_skull"
+          /></a>
+          <p class="product_name">skull</p>
+          <p class="product_price">85$</p>
+        </li>
+        <li class="home_products">
+          <a href="products.html"
+            ><img
+              class="product_img"
+              src="./images/board_skull.png"
+              alt="board_skulls"
+          /></a>
+          <p class="product_name">skulls</p>
+          <p class="product_price">80$</p>
+        </li>
+      </ul>
+
+      <ul class="about_ul">
+        <li class="about_img">
+          <img class="banner_img" src="./images/banner.png" alt="skate ramp" />
+        </li>
+        <li class="about_text">
+          <h2>Our story</h2>
+          <p>
+            We want to make the best boards for every skateboarder out there.
+            Our focus is to make the strongest and lightest boards out there
+            with our new carbonfiber technology. Our motto is: From
+            skateboarders to skateboarders.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom_banner">
+      <p class="copyright">Copyright, Powell Peralta</p>
+    </div>
   </body>
 </html>
