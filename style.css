@@ -164,6 +164,7 @@ a:active {
 
 .inputfield {
   font-size: 1.25vw;
+  transition: border-left 1s;
 }
 
 .inputfield:focus {
