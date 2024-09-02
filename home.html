@@ -45,14 +45,38 @@
             <label for="lname">Last name:</label><br />
             <input type="text" id="lname" name="lname" value="Type here" />-->
             <label for="uname">User name:</label><br />
-            <input type="text" id="uname" name="uname" required /><br />
+            <input
+              placeholder="Enter username"
+              class="inputfield"
+              type="text"
+              id="uname"
+              name="uname"
+              pattern="^[a-zA-Z0-9_-]{4,16}$"
+              minlength="4"
+              maxlength="16"
+              required
+            /><br />
             <label for="email">Email adress:</label><br />
-            <input type="email" id="email" name="email" required /><br />
+            <input
+              placeholder="Enter email"
+              class="inputfield"
+              type="email"
+              id="email"
+              name="email"
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              minlength="2"
+              required
+            /><br />
             <label for="password">Password:</label><br />
             <input
+              placeholder="Enter password"
+              class="inputfield"
               type="password"
               id="password"
               name="password"
+              pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,18}$/g"
+              minlength="8"
+              maxlength="18"
               required
             /><br />
             <br /><br />
