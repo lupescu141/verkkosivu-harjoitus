@@ -5,6 +5,7 @@
     <title>home</title>
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
+    <script src="main.js" defer></script>
   </head>
 
   <body>
@@ -25,8 +26,40 @@
         <li class="navbar">
           <a class="navlink" href="contact.html">Contact</a>
         </li>
+
+        <li class="navbar">
+          <!-- Trigger/Open The Modal -->
+          <button id="myBtn" class="modalButton">Sign in</button>
+        </li>
       </ul>
       <img class="sticky" src="./images/sticky.webp" alt="skater" />
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form action="">
+            <!--<label for="fname">First name:</label><br />
+            <input type="text" id="fname" name="fname" value="Type here" /><br />
+            <label for="lname">Last name:</label><br />
+            <input type="text" id="lname" name="lname" value="Type here" />-->
+            <label for="uname">User name:</label><br />
+            <input type="text" id="uname" name="uname" required /><br />
+            <label for="email">Email adress:</label><br />
+            <input type="email" id="email" name="email" required /><br />
+            <label for="password">Password:</label><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+            /><br />
+            <br /><br />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
 
       <ul class="product_ul">
         <li>
