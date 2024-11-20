@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>home</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="home_container">
+      <ul class="nav">
+        <li class="navbar">
+          <a class="navlink" href="home.html"
+            ><img class="logo" src="./images/logo.png" alt="logo"
+          /></a>
+        </li>
+
+        <li class="navbar"><a class="navlink" href="home.html">Home</a></li>
+
+        <li class="navbar">
+          <a class="navlink" href="products.html">Products</a>
+        </li>
+
+        <li class="navbar">
+          <a class="navlink" href="contact.html">Contact</a>
+        </li>
+
+        <li class="navbar">
+          <!-- Trigger/Open The Modal -->
+          <button id="myBtn" class="modalButton">Sign in</button>
+        </li>
+      </ul>
+
+      <header class="mobile_nav">
+        <mobileNav>
+          <img class="mobile_logo" src="./images/logo.png" alt="logo" />
+          <ul id="mobile_navlinks">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="menu-icon">
+            <i id="login_icon" class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+          </div>
+        </mobileNav>
+
+        <script>
+          let menuList = document.getElementById("mobile_navlinks");
+          menuList.style.maxHeight = "0px";
+
+          function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+              menuList.style.maxHeight = "300px";
+            } else {
+              menuList.style.maxHeight = "0px";
+            }
+          }
+
+          src = "https://kit.fontawesome.com/f8e1a90484.js";
+          crossorigin = "anonymous";
+        </script>
+      </header>
+
+      <img class="sticky" src="./images/sticky.webp" alt="skater" />
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form action="">
+            <!--<label for="fname">First name:</label><br />
+            <input type="text" id="fname" name="fname" value="Type here" /><br />
+            <label for="lname">Last name:</label><br />
+            <input type="text" id="lname" name="lname" value="Type here" />-->
+            <label for="uname">User name:</label><br />
+            <input
+              placeholder="Enter username"
+              class="inputfield"
+              type="text"
+              id="uname"
+              name="uname"
+              pattern="^[a-zA-Z0-9_-]{4,16}$"
+              minlength="4"
+              maxlength="16"
+              required
+            /><br />
+            <label for="email">Email adress:</label><br />
+            <input
+              placeholder="Enter email"
+              class="inputfield"
+              type="email"
+              id="email"
+              name="email"
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              minlength="2"
+              required
+            /><br />
+            <label for="password">Password:</label><br />
+            <input
+              placeholder="Enter password"
+              class="inputfield"
+              type="password"
+              id="password"
+              name="password"
+              pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,18}$/g"
+              minlength="8"
+              maxlength="18"
+              required
+            /><br />
+            <br /><br />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+
+      <ul class="product_ul">
+        <li>
+          <h1>News</h1>
+          <p>Check out our new boards!</p>
+        </li>
+        <li class="home_products">
+          <a href="products.html"
+            ><img
+              class="product_img"
+              src="./images/board_dragon.png"
+              alt="Dragon_board"
+          /></a>
+          <p class="product_name">epic dragon</p>
+          <p class="product_price">99$</p>
+        </li>
+        <li class="home_products">
+          <a href="products.html"
+            ><img
+              class="product_img"
+              src="./images/board_skull2.png"
+              alt="board_skull"
+          /></a>
+          <p class="product_name">skull</p>
+          <p class="product_price">85$</p>
+        </li>
+        <li class="home_products">
+          <a href="products.html"
+            ><img
+              class="product_img"
+              src="./images/board_skull.png"
+              alt="board_skulls"
+          /></a>
+          <p class="product_name">skulls</p>
+          <p class="product_price">80$</p>
+        </li>
+      </ul>
+
+      <ul class="about_ul">
+        <li class="about_img">
+          <img class="banner_img" src="./images/banner.png" alt="skate ramp" />
+        </li>
+        <li class="about_text">
+          <h2>Our story</h2>
+          <p>
+            We want to make the best boards for every skateboarder out there.
+            Our focus is to make the strongest and lightest boards out there
+            with our new carbonfiber technology. Our motto is: From
+            skateboarders to skateboarders.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom_banner">
+      <p class="copyright">Copyright, Powell Peralta</p>
+    </div>
+  </body>
+</html>
